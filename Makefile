@@ -1,6 +1,6 @@
 WORK_DIR:=$(shell readlink -f $(dir $(lastword $(MAKEFILE_LIST))))
 
-VERSION?=69.0.3497.100-0ubuntu1
+VERSION?=68.0.3440.84
 
 default:
 	cd $(WORK_DIR)

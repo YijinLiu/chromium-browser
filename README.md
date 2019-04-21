@@ -2,7 +2,7 @@ Build docker containers with old version of Chromium browser for testing purpose
 
 Usage:
 <pre>
-export VERSION=69.0.3497.100-0ubuntu1
+export VERSION=68.0.3440.84
 make VERSION=${VERSION}
 wget https://raw.githubusercontent.com/jfrazelle/dotfiles/master/etc/docker/seccomp/chrome.json -O ~/chrome.json
 docker run -it --user=$USER -e DISPLAY=unix$DISPLAY -v "/tmp/.X11-unix:/tmp/.X11-unix" \

@@ -1,4 +1,4 @@
-FROM ubuntu:18.10
+FROM ubuntu:16.04
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt update && apt upgrade -y && \
@@ -18,4 +18,5 @@ USER $NAME
 WORKDIR /home/$NAME
 
 ARG VERSION
-RUN sudo apt install -y chromium-codecs-ffmpeg-extra=${VERSION} chromium-browser=${VERSION}
+RUN wget -O chrome64_${VERSION}.deb https://www.slimjet.com/chrome/download-chrome.php?file=lnx%2Fchrome64_${VERSION}.deb
+RUN sudo apt install -y --no-install-recommends ./chrome64_${VERSION}.deb
